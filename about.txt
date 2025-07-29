@@ -1,0 +1,27 @@
+Garbage collection
+  Bu Ma`lum bir vaqt otgandan kiyin ishlatilmagan kodlarni tozalaydi yani xotiradan joy olib tugan keraksiz kodlarni o`chirib tashlaydi.Garbage collectionnni biz ishlatmaymiz uni JavaScript avtomatik tarzda ishlatadi
+JavaScript braozurida ishlayotganda uni toridan tori tushuna olmasligi sababli uni mashina tushunadigan  tilga aylantirish kerak yani uzi tushunadigann tilga.Brouzerning JS engine(mexanizm)i JavaScript kodiga duch kelganida u biz yozgan JS kodini translation qiladi va bajarilishi boshqaradigan maxsus muhit yaratadi.Bu muhit Execulition context deb ataladi.
+Execition context global scope va function scope ga ega bolishi mumkun.JS burunchu marta boshlaganida u global scope yaratadi.
+keyion JavaScript parse tahlil qilinadi va ozgaruvchi va funcsiya declaration xotiraga saqlaydi.
+Har bir block kod uchun JS tomonidan ochiladigan ma'lumotlar bloki bo'lib, ayni damda ishlayotgan kod uchun kerak bo'lgan barcha ma'lumotlarni o'zida jamlaydi. Masalan, this kalit so'zi, o'zgaruvchilar/funksiyalar...
+(EC) Execution context ikki turda bo'ladi, Global va Function execution context.
+Harbir EC ikki bosqich(phase)ga bo'linadi.
+1. Creation phase (Yasalish bosqichi) Bu bosqichda quyidagilar ro'y beradi:
+1.1 O'zgaruvchi va funksiyalar declaration'larini saqlash.
+1.2 Scope chain yasalishi.
+
+Asosiy 3 xil scope bor.
+Ular :
+  1: Global Scope
+  2: Function Scope
+  3: Block scope
+Global scope u korinmiydi Js ni uzida boladi
+Function scope — bu o'zgaruvchilar faqat funksiyaning ichida e'lon qilingan joyda mavjud. Boshqa joylarda ushbu o'zgaruvchilarga murojaat qilish mumkin emas.
+Tavsif: Block scope — bu o'zgaruvchilar faqat {} qavslar ichida mavjud bo'ladi. ES6 dan boshlab let va const kalit so'zlari yordamida e'lon qilingan o'zgaruvchilar block scope ga ega
+
+Hoisting 
+var bilan e'lon qilingan o'zgaruvchilar hoisting jarayonida undefined ga o'rnatiladi.
+let va const bilan e'lon qilingan o'zgaruvchilar TDZ ga ega va e'lon qilinmagan joyda chaqirilmaydi.
+Funksiyalar to'liq ko'tariladi va chaqirilishi mumkin.
+
+
